@@ -33,3 +33,9 @@ form.on('submit', function (e) {
     });
     e.preventDefault();
 });
+
+$(".btn-success").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#thanks").offset().top
+    }, 2000);
+});
