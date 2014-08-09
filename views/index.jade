@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  form(action='/send' method='post')
-    input(type='text', name='cats', value='cats')
-    input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
-    input(type='submit', value='Send')
+  .container
+    h1.page-header= title
+    p Welcome to #{title}
+    form.input-group(action='/send' method='post')
+      input.form-control(type='text', name='cats', value='cats')
+      input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
+      input.btn.btn-success(type='submit', value='Send')
