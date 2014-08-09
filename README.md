@@ -1,4 +1,6 @@
-# VidTip (the project previously known as StashVideo)
+# VidTip 
+
+(the project previously known as StashVideo)
 
 A hackathon project from FOSSCON 2014
 
