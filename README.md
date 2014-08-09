@@ -12,7 +12,7 @@ Leverages the [Stash API](http://stash.my) for encrypting the video so that the 
 
 # Contributors
 
--[Pam](https://github.com/pselle)
--[Wale](https://github.com/kopasetik)
--[Victor](https://github.com/LabLayers)
--[Eric](https://github.com/er2)
+- [Pam](https://github.com/pselle)
+- [Wale](https://github.com/kopasetik)
+- [Victor](https://github.com/LabLayers)
+- [Eric](https://github.com/er2)
