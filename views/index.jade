@@ -1,21 +1,32 @@
 extends layout
 
 block content
-  .container
-    form.input-group(method='post', enctype='multipart/form-data')
-      .view#record
-        input#record(type='button', value='Record a Video')
-        input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
-      .view#problem
-        label What's the problem?
-        br
-        .btn-group-vertical  
-          input.btn.btn-default(type='button', name='problem', value='Police Brutality')
-          input.btn.btn-default(type='button', name='problem', value='Street Harassment')
-          input.btn.btn-default(type='button', name='problem', value='Other')
-      .view  
-        label Summarize the problem
-        br
-        textarea(placeholder='Describe what you saw.')
-      .view#submit
-        input.btn.btn-success(type='submit', value='Submit')
+  header#top
+    .container
+      h1 Stash Video
+      p.lead Report street crime. Save the world.
+      a.btn.btn-default(href='#upload') Let's Do This!
+  section#upload
+    .container
+      form.input-group(method='post', enctype='multipart/form-data')
+        .view#record
+          input#record(type='button', value='Record a Video')
+          label(for='capture') Catch a Video
+          input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
+        .view#problem
+          label What's the problem?
+          br
+          .btn-group-vertical  
+            input.btn.btn-default(type='button', name='problem', value='Police Brutality')
+            input.btn.btn-default(type='button', name='problem', value='Street Harassment')
+            input.btn.btn-default(type='button', name='problem', value='Other')
+        .view  
+          label Summarize the problem
+          br
+          textarea(placeholder='Describe what you saw.')
+        .view#submit
+          input.btn.btn-success(type='submit', value='Submit')
+  section#thanks
+    .container
+      h1 Thanks!
+      p.lead Your report will be taken seriously.
