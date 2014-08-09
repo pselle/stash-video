@@ -10,17 +10,21 @@ block content
     .container
       form.input-group(method='post', enctype='multipart/form-data')
         .view#record
-          input#record(type='button', value='Record a Video')
-          label(for='capture') Catch a Video
+          // input#record(type='button', value='Record a Video')
+          label What's the problem?
+          br
+          label.btn.btn-default(for='capture') Catch or Upload a Video
           input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
         .view#problem
+          br
           label What's the problem?
           br
           .btn-group-vertical  
             input.btn.btn-default(type='button', name='problem', value='Police Brutality')
             input.btn.btn-default(type='button', name='problem', value='Street Harassment')
             input.btn.btn-default(type='button', name='problem', value='Other')
-        .view  
+        .view
+          br
           label Summarize the problem
           br
           textarea(placeholder='Describe what you saw.')
