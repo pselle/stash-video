@@ -11,13 +11,17 @@ console.log('client side loaded');
 var form = $('#upload');
 
 form.on('submit', function (e) {
+    var formdata = new FormData();
+    formdata.append('filedata', document.getElementById('capture').files[0]);
+    formdata.append('recipientId', document.getElementById('recipientId').value);
+    formdata.append('sessionId', document.getElementById('sessionId').value);
     $.ajax({
         type: 'POST',
         url: 'https://api.stash.my/v0/messages/send/file',
         contentType: false,
         processData: false,
         cache: false,
-        data: new FormData(this),
+        data: formdata,
         success: function (data) {
             console.log(data);
             return false;
