@@ -3,4 +3,7 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  input(type='file', accept='video/*', id='capture', capture='camcorder')
+  form(action='/send' method='post')
+    input(type='text', name='cats', value='cats')
+    input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
+    input(type='submit', value='Send')
