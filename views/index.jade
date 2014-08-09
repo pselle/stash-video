@@ -4,6 +4,23 @@ block content
   .container
     p Welcome to #{title}
     form.input-group(method='post', enctype='multipart/form-data')
-      input.form-control(type='text', name='name', value='cats')
-      input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
-      input.btn.btn-success(type='submit', value='Send')
+      .view
+        input#record(type='button', value='Record a Video')
+        input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
+      .view
+        label What's the problem?
+        br
+        input(type='radio', name='problem', value='Police Brutality')
+        label Police Brutality
+        br
+        input(type='radio', name='problem', value='Street Harassment')
+        label Street Harassment
+        br
+        input(type='radio', name='problem', value='Other')
+        label Other
+      .view  
+        label Summarize the problem
+        br
+        textarea(placeholder='Describe what you saw.')
+      .view  
+        input.btn.btn-success(type='submit', value='Submit')
