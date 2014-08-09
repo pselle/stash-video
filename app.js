@@ -23,10 +23,7 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 
-// Watch styles with LESS
 app.use(lessMiddleware(__dirname + '/public'));
-
-// Serve files with express
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
