@@ -4,7 +4,7 @@ block content
   .container
     h1.page-header= title
     p Welcome to #{title}
-    form.input-group(action='/send' method='post')
-      input.form-control(type='text', name='cats', value='cats')
-      input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder', enctype='multipart/form-data')
+    form.input-group(method='post', enctype='multipart/form-data')
+      input.form-control(type='text', name='name', value='cats')
+      input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
       input.btn.btn-success(type='submit', value='Send')
