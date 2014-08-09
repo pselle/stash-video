@@ -1,17 +1,11 @@
 function success(position) {
-  var s = document.querySelector('.location');
   
-  if (s.className == 'location') {
-    // not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back    
-    return;
-  }
   
-  s.innerHTML = "found you!";
-  s.className = 'location';
-  
-  console.log(position.coords.latitude);p
-  console.log(position.coords.longitude);p
-  console.log(position.coords.accuracy);p
+  console.log(position.coords.latitude);
+  console.log(position.coords.longitude);
+  console.log(position.coords.accuracy);
+
+  $( ".btn-location" ).text( position.coords.latitude + ", " + position.coords.longitude );
 }
 
 function error(msg) {
