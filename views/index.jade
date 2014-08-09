@@ -2,7 +2,6 @@ extends layout
 
 block content
   .container
-    p Welcome to #{title}
     form.input-group(method='post', enctype='multipart/form-data')
       .view
         input#record(type='button', value='Record a Video')
@@ -10,14 +9,10 @@ block content
       .view
         label What's the problem?
         br
-        input(type='radio', name='problem', value='Police Brutality')
-        label Police Brutality
-        br
-        input(type='radio', name='problem', value='Street Harassment')
-        label Street Harassment
-        br
-        input(type='radio', name='problem', value='Other')
-        label Other
+        .btn-group-vertical  
+          input.btn.btn-default(type='button', name='problem', value='Police Brutality')
+          input.btn.btn-default(type='button', name='problem', value='Street Harassment')
+          input.btn.btn-default(type='button', name='problem', value='Other')
       .view  
         label Summarize the problem
         br
