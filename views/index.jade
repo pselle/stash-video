@@ -6,5 +6,5 @@ block content
     p Welcome to #{title}
     form.input-group(action='/send' method='post')
       input.form-control(type='text', name='cats', value='cats')
-      input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder')
+      input#capture(type='file', name='videoInput', accept='video/*', capture='camcorder', enctype='multipart/form-data')
       input.btn.btn-success(type='submit', value='Send')
