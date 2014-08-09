@@ -8,17 +8,22 @@
 // Success
 console.log('client side loaded');
 
-var form = $('#sendfile');
+var form = $('#upload');
 
 form.on('submit', function () {
     console.log('submitted');
     var filedata = new FormData(),
         video = document.getElementById('capture').files[0];
+
+    filedata.append('video', video);
     debugger;
 
     $.ajax({
         type: 'POST',
         url: 'https://api.stash.my/v0/messages/send/file',
+        contentType: false,
+        processData: false,
+        cache: false,
         data: {
             filedata: filedata,
             recipientId: '7f46085a-ea38-4cc1-b477033861c20d76',
@@ -29,9 +34,10 @@ form.on('submit', function () {
             alert('ok');
             return false;
         },
-        error: function(err) {
-            console.log(err);
+        error: function(xhr, status, error) {
+            console.log(status);
             debugger;
+            return false;
         }
-    })
+    });
 })
