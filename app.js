@@ -22,11 +22,12 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
 
-// LESS
+// Watch styles with LESS
 app.use(lessMiddleware(__dirname + '/public'));
-app.use(express.static(__dirname + '/public'));
+
+// Serve files with express
+app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
